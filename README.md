@@ -4,7 +4,7 @@
 
 ## Description
 
-lorem ipsum
+An Api that will return a number of National Parks. In version 2.0, user can search for a state by name and see all the parks associated with that state.
 
 ## Technologies User
 
