@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace NationalParksApi;
 
 public class NatlPark
@@ -6,4 +8,6 @@ public class NatlPark
     public string Name { get; set; }
     public string Description { get; set; }
     public int StateId { get; set; }
+    [ForeignKey("StateId")]
+    public State State { get; set; }
 }
