@@ -62,5 +62,19 @@ public class NationalParksController : Controller
   {
     return _db.NatlParks.Any(e => e.NatlParkId == id);
   }
+
+  [HttpDelete("{id}")]
+  public async Task<IActionResult> DeleteNatlPark(int id)
+  {
+    NatlPark natlPark = await _db.NatlParks.FindAsync(id);
+    if (natlPark == null)
+    {
+      return NotFound();
+    }
+    _db.NatlParks.Remove(natlPark);
+    await _db.SaveChangesAsync();
+
+    return NoContent();
+  }
 }
 
