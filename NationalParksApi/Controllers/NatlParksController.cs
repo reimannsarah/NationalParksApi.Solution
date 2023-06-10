@@ -32,4 +32,35 @@ public class NationalParksController : Controller
     }
     return natlPark;
   }
+
+  [HttpPut("{id}")]
+  public async Task<IActionResult> Put(int id, NatlPark natlPark)
+  {
+    if (id != natlPark.NatlParkId)
+    {
+      return BadRequest();
+    }
+    _db.NatlParks.Update(natlPark);
+    try
+    {
+      await _db.SaveChangesAsync();
+    }
+    catch(DbUpdateConcurrencyException)
+    {
+      if(!NatlParkExists(id))
+      {
+        return NotFound();
+      }
+      else
+      {
+        throw;
+      }
+    }
+    return NoContent();
+    }
+  private bool NatlParkExists(int id)
+  {
+    return _db.NatlParks.Any(e => e.NatlParkId == id);
+  }
 }
+
