@@ -65,7 +65,6 @@ public class NationalParksApiContext : DbContext
         new State { StateId = 50, Name = "Wyoming" }
       );
 
-
     builder.Entity<NatlPark>()
       .HasData(
         new NatlPark { NatlParkId = 1, Name = "Acadia", Description = "Features the tallest mountain on the Atlantic Coast of the United States.", StateId = 19},
