@@ -7,11 +7,11 @@ namespace NationalParksApi.Controllers;
 [ApiController]
 [ApiVersion("1.0")]
 [Route("api/v{version:ApiVersion}/[controller]")]
-public class NationalParksController : Controller
+public class NatlParksController : Controller
 {
   private readonly NationalParksApiContext _db;
 
-  public NationalParksController(NationalParksApiContext db)
+  public NatlParksController(NationalParksApiContext db)
   {
       _db = db;
   }
