@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using NationalParksApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace NationalParksApi.Controllers;
+namespace NationalParksApi.Controllers.v1;
 
 [ApiController]
 [ApiVersion("1.0")]
