@@ -8,10 +8,15 @@ lorem ipsum
 
 ## Technologies User
 
-*
-*
-*
-*
+* C#
+* .NET
+* .ASP.NET CORE
+* MVC
+* Entity Framework Core
+* EF Core Migrations
+* Swashbuckle
+* Swagger
+* MySQL
 
 ## Database Structure
 ![photo of SQL designer](./NationalParksAPI/wwwroot/imgs/schema.png)
