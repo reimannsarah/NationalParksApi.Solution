@@ -78,16 +78,27 @@ PUT https://localhost:7158/api/v2/states/{id}
 DELETE https://localhost:7158/api/v2/states/{id}
 
 ```
+# To test routes in Swagger: 
 
 * In your terminal, navigate to the project directory and run ```dotnet watch run``` 
 * In your broswer, open https://localhost:7292/swagger/index.html
 * user the GUI to navigate the API
 
-* Query Parameters for a GET Request on **Countries**: 
+# To test routes in PostMan:
+
+* Make sure that Postman API Platform is downloaded to your device
+* Start a new request by clicking the + at the top of the window
+* Copy and paste any of the above listed end point links into the text bar that says 'Enter URL or paste text'
+* Make sure the method to the left of the text box matches the method described for the endpoint you are testing
+* If route requires a body, navigate to the body window just below the text box
+* Copy and paste the body code listed above and replace fields with their respective values
+* Click send and wait for response at the bottom of the window
+
+* Query Parameters for a GET Request on **States**: 
 
 | Parameter  | Type   | Required     | Description                                      | Sample Url  |
 |----------- |-----   | ---------    | -------------                                    | ----------  |
-| NatlParks | Name | not required | Returns State with a matching name value and includes all National Parks in that state | https://localhost:5001/api/countries |
+| NatlParks | Name | not required | Returns State with a matching name value and includes all National Parks in that state | https://localhost:5001/api/states |
 
 ## Known bugs
 
